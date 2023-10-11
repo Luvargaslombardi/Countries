@@ -1,36 +1,45 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import styles from "./Navbar.module.css";
 
 export default function Navbar({ handleChange, handleSubmit, searchCountry }) {
   const location = useLocation();
 
   return (
-    <div>
-      <div>
-        <button>
-          <Link to="/home">Home</Link>
+    <div className={styles.navbarContainer}>
+      <div className={styles.navbarContent}>
+        <button className={styles.navButton}>
+          <Link to="/home" className={styles.navLink}>
+            Home
+          </Link>
         </button>
-        {location.pathname === "/form" ? <h1>Create a New Activity!</h1> : null}
-        <button>
-          <Link to="/form">Create Activities</Link>
+        {location.pathname === "/form" ? (
+          <h1 className={styles.navHeader}>New Activity</h1>
+        ) : null}
+        <button className={styles.navButton}>
+          <Link to="/form" className={styles.navLink}>
+            Create Activities
+          </Link>
         </button>
         {location.pathname === "/home" && (
-          <form>
+          <form className={styles.searchForm}>
             <input
               onChange={(event) => handleChange(event)}
               type="search"
               placeholder="Search..."
               value={searchCountry}
+              className={styles.searchInput}
             />
-            <button type="submit" onClick={handleSubmit}>
+            <button
+              type="submit"
+              onClick={handleSubmit}
+              className={styles.searchButton}
+            >
               Search
             </button>
           </form>
         )}
       </div>
-      {location.pathname !== "/form" ? (
-        <img src="ruta_de_la_imagen.jpg" alt="Welcome" />
-      ) : null}
     </div>
   );
 }

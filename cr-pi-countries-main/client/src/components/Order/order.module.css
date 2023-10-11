@@ -1,0 +1,29 @@
+.orderContainer {
+  background-color: #120b20d3; /* Fondo plateado */
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.orderText {
+  font-size: 16px;
+  color: #ffffff; /* Color de texto blanco */
+}
+
+.orderSelect {
+  padding: 0.5rem;
+  font-size: 16px;
+  background-color: #0077b6; /* Color de fondo azul eléctrico */
+  color: #ffffff; /* Color de texto blanco */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.orderSelect:hover {
+  background-color: #005d8a; /* Color de fondo al pasar el mouse */
+}

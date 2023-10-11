@@ -1,0 +1,12 @@
+/* Cards.module.css */
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  ); /* Distribución de tarjetas responsiva */
+  gap: 20px; /* Espacio entre tarjetas */
+  padding: 20px;
+  justify-content: center;
+}

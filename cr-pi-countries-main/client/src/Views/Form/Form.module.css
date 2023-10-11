@@ -1,0 +1,73 @@
+/* form.module.css */
+
+/* Contenedor principal del formulario */
+.formContainer {
+  background-color: #780f6ebf; /* Fondo gris claro */
+  border: 1px solid #ddd; /* Borde suave */
+  border-radius: 8px;
+  padding: 55px;
+  max-width: 500px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centrado horizontal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Etiquetas de los campos del formulario */
+.formLabel {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0d0101; /* Color de texto más oscuro */
+}
+
+/* Campos de entrada de texto y selección */
+.formInput,
+.formSelect {
+  width: auto;
+  padding: 12px;
+  border: 1px solid #ccc; /* Borde suave */
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 8px;
+  transition: border-color 0.2s;
+}
+
+.formInput:focus,
+.formSelect:focus {
+  outline: none;
+  border-color: #007bff; /* Color del borde al hacer foco */
+}
+
+/* Etiqueta y estilo para los checkboxes */
+.formCheckboxLabel {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #060101; /* Color de texto más oscuro */
+}
+
+.formCheckboxLabel input {
+  margin-right: 10px;
+}
+
+/* Mensajes de error */
+.formErrorMessage {
+  color: #bb1212; /* Color del mensaje de error */
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Botón de envío del formulario */
+.formSubmitButton {
+  background-color: #00ff55; /* Color de fondo del botón de envío */
+  color: #fff; /* Color del texto del botón de envío */
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.formSubmitButton:hover {
+  background-color: #1e00b3cc; /* Cambia el color de fondo al pasar el cursor */
+}

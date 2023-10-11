@@ -1,3 +1,6 @@
+import React from "react";
+import styles from "./Pagination.module.css";
+
 export function Pagination({
   countriesPerPage,
   currentPage,
@@ -23,19 +26,30 @@ export function Pagination({
   };
 
   return (
-    <div>
+    <div className={styles.paginationContainer}>
+      {" "}
+      {/* Agrega una clase de contenedor */}
       {pageNumbers.length === 1 ? (
         setCurrentPage(1)
       ) : (
         <nav>
           {currentPage === 1 ? null : (
-            <button onClick={onPreviousPage}>Previous</button>
+            <button
+              className={styles.paginationButton}
+              onClick={onPreviousPage}
+            >
+              Previous
+            </button>
           )}
-          <ul>
+          <ul className={styles.paginationList}>
+            {" "}
+            {/* Agrega una clase para la lista */}
             {pageNumbers.map((noPage) => (
               <li key={noPage}>
                 <button
-                  className={currentPage === noPage ? "current" : ""}
+                  className={`${styles.paginationButton} ${
+                    currentPage === noPage ? styles.current : ""
+                  }`}
                   onClick={() => onSpecificPage(noPage)}
                 >
                   {noPage}
@@ -44,7 +58,9 @@ export function Pagination({
             ))}
           </ul>
           {currentPage === pageNumbers.length ? null : (
-            <button onClick={onNextPage}>Next</button>
+            <button className={styles.paginationButton} onClick={onNextPage}>
+              Next
+            </button>
           )}
         </nav>
       )}

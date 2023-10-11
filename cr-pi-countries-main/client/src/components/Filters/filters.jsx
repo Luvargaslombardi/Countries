@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./Filters.module.css";
 
 export default function Filters({
   handleFilter,
@@ -6,6 +7,7 @@ export default function Filters({
   activities,
 }) {
   const checkActivity = {};
+  //Creo objeto vacio que rastrea las actividades y evita duplicados en la lista
 
   const activitiesName = activities
     ?.map((activity) => {
@@ -18,9 +20,11 @@ export default function Filters({
     .filter((name) => name !== null);
 
   return (
-    <div>
-      <p>Filter By Activity: </p>
-      <select onChange={handleFilterByActivity}>
+    <div className={styles.filtersContainer}>
+      {" "}
+      {/* Agrega una clase de contenedor */}
+      <p className={styles.filterLabel}>Filter By Activity: </p>
+      <select className={styles.filterSelect} onChange={handleFilterByActivity}>
         <option value="Show All">Show All</option>
         {activitiesName.length > 0
           ? activitiesName.map((name) => (
@@ -30,8 +34,8 @@ export default function Filters({
             ))
           : null}
       </select>
-      <p>Filter By Continent: </p>
-      <select onChange={handleFilter}>
+      <p className={styles.filterLabel}>Filter By Continent: </p>
+      <select className={styles.filterSelect} onChange={handleFilter}>
         <option value="Show All">Show All</option>
         <option value="Antarctic">Antarctic</option>
         <option value="Americas">Americas</option>

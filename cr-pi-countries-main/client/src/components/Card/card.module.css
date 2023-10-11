@@ -1,0 +1,43 @@
+/* Card.module.css */
+
+.cardContainer {
+  background-color: #0a003dd3; /* Fondo blanco */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.cardContainer:hover {
+  transform: scale(1.05); /* Efecto de aumento al pasar el cursor */
+}
+
+.countryName {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #eed8d8; /* Color del enlace */
+}
+
+.link:hover {
+  text-decoration: underline; /* Subrayado al pasar el cursor */
+}
+
+.flag {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid #ddd; /* Borde alrededor de la imagen */
+  border-radius: 4px;
+}
+
+.region {
+  font-size: 14px;
+  color: #666; /* Color de la región */
+  margin: 10px 0;
+}
